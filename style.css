@@ -696,3 +696,139 @@ ________________________________________________________________________________
 _______________________________________________________________________________________
 ___________________________ AQUI TERMINA PAGINA PRINCIPAL SERVICIOS DE JORGELINA MENDIETA PARA SEGUNDA ENTREGA DEL TP ____________________________
 ____________________________________________________________________________________________*/
+
+/*-----------------------------ESTILOS SECCION NOSOTROS-------------------------------- -----------------*/
+
+.fondo {
+  background-attachment: fixed;
+  background-image: url("imagenes/imgnosotros/fondo-focos.avif");
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  background-size: cover;
+  background-position: center;
+}
+
+.baloo-2-titulo-principal {
+  font-family: "Baloo 2", cursive;
+  color: #c999bd;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 2px 2px 4px #3f253b;
+}
+
+#historia {
+  background-color: #c5e8f3;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+#beneficios {
+  background-color: #f7fda4;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.content .beneficios-h2 {
+  text-align: center;
+  margin:0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-family: 'pacifico', cursive;
+  font-size: 2rem;
+  color: #a64ca6; 
+}
+
+.content p {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+}
+
+
+#historia .historia-h2 {
+  text-align: center;
+  margin-bottom:10px;
+  padding: 0;
+  font-family: 'pacifico', cursive;
+  font-size: 2rem;
+  color: #b89602; 
+}
+
+.fondo-conocenos {
+  background-image: url("imagenes/imgnosotros/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.img-chica {
+  display: block;
+  margin: 0 auto;
+  width: 65%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.ultimo-texto {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-family: 'releway', cursive;
+  font-size: 1.5rem;
+  color: #c44f6c;
+}
+
+.redes {
+  background-color: #ebd8dc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.redes a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.redes a:hover {
+  color: #3cacfc;
+}
+
+@media (max-width: 600px) {
+  .fondo-conocenos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .baloo-2-titulo-principal {
+    font-size: 3rem;
+  }
+}
+
+/*--------------------------------------termina seccion nosotros-----------------------------------*/
+
+
+
+
+
