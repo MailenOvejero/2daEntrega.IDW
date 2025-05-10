@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto | IDW - Eventos</title>
+    <link rel="shortcut icon" href="../Presupuesto/presupuesto-96.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header modificado para presupuesto -->
+    <header class="yamila-header container-fluid py-3 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="yamila-empresa">IDW S.A</div>
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../Home/index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Nosotros/nosotros.html">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Servicios/servicios.html">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Presupuesto/presupuesto.html">PRESUPUESTO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Contactanos/contacto.html">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal con imagen de fondo -->
+    <main class="yamila-presupuesto">
+        <section class="container text-center">
+            <h2 class="fw-bold text-dark">Queremos ayudarte a hacer realidad el evento que imaginás</h2>
+            <h3 class="fw-semibold text-primary">Solicitá tu Presupuesto</h3>
+            <p class="text-dark">Uno de nuestros especialistas se pondrá en contacto en breve, para conocer tus expectativas y ofrecerte una solución a tu medida.</p>
+            <form action="#" method="post" class="p-4 border rounded bg-dark">
+                <h4 class="fw-bold text-white">Completa el Formulario</h4>
+                
+                <!-- Datos personales -->
+                <fieldset class="mb-4">
+                    <legend class="fw-bold text-primary">Datos Personales</legend>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label text-white">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="localidad" class="form-label text-white">Localidad</label>
+                            <input type="text" class="form-control" id="localidad" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="telefono" class="form-label text-white">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label text-white">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Detalle del evento -->
+                <fieldset class="mb-4">
+                    <legend class="fw-bold text-primary">Detalle del Evento</legend>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="evento" class="form-label text-white">Tipo de evento</label>
+                            <select class="form-select" id="evento" required>
+                                <option value="boda">Boda</option>
+                                <option value="corporativo">Corporativo</option>
+                                <option value="cumpleaños">Cumpleaños</option>
+                                <option value="quince">Quince</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="fecha" class="form-label text-white">Fecha del evento</label>
+                            <input type="date" class="form-control" id="fecha" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="invitados" class="form-label text-white">N° Invitados</label>
+                            <input type="number" class="form-control" id="invitados" min="0">
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary w-100">Solicitar Presupuesto</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer modificado para presupuesto -->
+    <footer class="yamila-footer container-fluid text-center py-3">
+        <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
