@@ -230,3 +230,469 @@ footer.yamila-footer {
     display: block;
   }
 }
+
+
+
+
+
+
+
+
+
+/*
+_______________________________________________________________________________________
+___________________________ PAGINA PRINCIPAL SERVICIOS DE JORGELINA MENDIETA PARA SEGUNDA ENTREGA DEL TP ____________________________
+____________________________________________________________________________________________*/
+/*dejo comentarios para descripcion de cada cosa realizada*/
+
+
+
+/* estilos adicionales a carrusel bootstrap*/
+.carousel-inner img {
+  height: 70vh;
+  /* 50% del alto del viewport */
+  object-fit: cover;
+  /* Mantiene la proporción y recorta lo que sobra */
+}
+
+/* para poner una capa transparente en las imagenes*/
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item .transparencia {
+  position: absolute;
+  /* Posición absoluta respecto al contenedor padre */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Alto completo */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Negro con 40% de transparencia */
+  z-index: 1;
+  /* Se ubica por debajo del texto */
+}
+
+/* Personalización del texto del carrusel */
+.carousel-caption {
+  position: absolute;
+  /* Posición absoluta para ubicar el texto libremente */
+  transform: translateY(-30%);
+  /* Lo sube la mitad de su altura para que quede centrado */
+  bottom: auto;
+  /* Anula el estilo por defecto que lo pone abajo */
+  z-index: 2;
+  /* Por encima de la capa oscura */
+  color: white;
+  /* Texto blanco */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+}
+
+/* Tamaño del título */
+.carousel-caption h3 {
+  font-size: 2.5rem;
+  /* Título más grande */
+  font-weight: bold;
+  /* Negrita */
+}
+
+/* Tamaño del texto debajo del título */
+.carousel-caption p {
+  font-size: 1.2rem;
+  /* Texto un poco más grande */
+}
+
+
+
+
+
+
+
+/*----------------estilos para el catalogo utilizando grid */
+/* Contenedor principal del catalogo de la seccion home de servicios  -------------------*/
+
+.catalogocongrid {
+  /*la que esta dentro de estructura aside */
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas en pantallas grandes */
+  gap: 20px;
+  /* Espacio entre las secciones */
+  padding: 20px;
+  /* Espacio alrededor del contenedor */
+}
+
+
+
+/* Estilo común para cada sección (articulo) dentro del catalogo principal en home servicios*/
+.seccionservicios {
+  background: linear-gradient(45deg, #8ED9DE, #EBD8DC, #BFDCE4, #EAC888);
+  ;
+  /*  background-color: rgba(0, 0, 0, 0.1);
+  Fondo claro para cada sección */
+  padding: 20px;
+  /* Espacio interno */
+  text-align: center;
+  /* Centrado del texto */
+  font-size: 1.2rem;
+  /* Tamaño de la fuente */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /*para poner la manito sobre cada seccion al pasar el mouse*/
+}
+
+/* Estilo adicional para hacerlo más atractivo */
+.seccionservicios:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Oscurece al pasar el mouse */
+  transform: scale(1.05);
+  /* Hace crecer ligeramente la sección */
+  transition: 0.3s ease;
+  /* Transición suave */
+
+}
+
+/*estilos para las imagenes dentro de cada seccion (articulo) dentro del catalogo principal en home servicios*/
+.seccionservicios img {
+  width: 100%;
+  /* La imagen ocupa todo el ancho del artículo */
+  height: auto;
+  /* Mantiene proporción */
+  border-radius: 8px;
+  /* Bordes redondeados iguales al contenedor */
+  margin-bottom: 10px;
+  /* Espacio entre la imagen y el texto */
+  object-fit: cover;
+  /* Ajuste si necesitás que se recorte bien */
+}
+
+
+
+/*estilos para el boton ver mas de cada articulo del catalogo*/
+
+.botonservicios {
+  display: inline-block;
+  /* Permite aplicar ancho y alto como si fuera un botón */
+  padding: 10px 20px;
+  /* Espaciado interno para agrandar el botón */
+  background: white;
+  /* fondo degradado */
+  color: rgb(88, 88, 88);
+  /* Texto blanco */
+  text-decoration: none;
+  /* Quita el subrayado del enlace */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  font-weight: bold;
+  /* Texto en negrita */
+  transition: background-color 0.3s ease;
+  /* Efecto suave al pasar el mouse */
+  /* Sombra para que se note mejor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botonservicios:hover {
+  background-color: #EBD8DC;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+  /* Hace crecer ligeramente la sección */
+  transition: 0.3s ease;
+  /* Transición suave */
+}
+
+
+
+
+
+
+
+/*--------------estilos dentro de seccion servicios / salones  cada tematica que hay disponible infantil boda general------*/
+
+.descripcionservicio {
+  margin-top: 2rem;
+  /* Espacio arriba */
+  padding: 1rem 4rem;
+  /* 1rem arriba/abajo, 2rem izquierda/derecha */
+  max-width: 1200px;
+  /* Opcional: limita el ancho del texto */
+  margin-left: auto;
+  /* Centra horizontalmente */
+  margin-right: auto;
+  /* Centra horizontalmente */
+}
+
+
+
+
+/*-----------estilos para la descripcion de cada salon disponible en la estructura aside de servicios/salones --------*/
+
+/*donde se describe cada salon disponible*/
+.serviciodesalones {
+  /*clase principal del aside*/
+  padding: 40px 5%;
+  /* Espaciado interior arriba/abajo 40px, a los lados 5% */
+
+
+  background: linear-gradient(45deg, #8ED9DE, #EBD8DC, #BFDCE4);
+  /* fondo degradado */
+  ;
+
+  color: rgb(88, 88, 88);
+  /* Texto blanco */
+  font-family: 'Segoe UI', sans-serif;
+  /* Tipografía moderna y legible */
+}
+
+
+
+/* ---------- para cada articulo dentro del aside con la clase serviciosalones  ---------- */
+.descripciondesalon {
+  margin-top: 60px;
+  margin-bottom: 150px;
+  /* Espaciado inferior entre artículos */
+}
+
+
+
+
+
+
+
+
+/* ---------- contenedor principal dentro de cada articulo del aside de servicios/salones para poder poner texto e imagenes ---------- */
+.contenido-salon {
+  display: flex;
+  /* Ubica el texto y las imágenes uno al lado del otro */
+  flex-wrap: wrap;
+  /* Permite que se acomoden en columna si no entra horizontal */
+  gap: 40px;
+  /* Espacio entre el texto y las imágenes */
+}
+
+/* ---------- texto que utilizamos ---------- */
+.texto-salon {
+  flex: 1 1 300px;
+  /* Toma al menos 300px, se adapta según el espacio disponible */
+}
+
+/* ---------- para titulo ---------- */
+.texto-salon h2 {
+  font-size: 2rem;
+  /* Tamaño grande del título */
+  font-weight: bold;
+  /* Negrita */
+  text-transform: uppercase;
+  /* Todo en mayúsculas */
+  margin-bottom: 20px;
+  /* Separación del párrafo siguiente */
+}
+
+/* ---------- para etiquetas p ---------- */
+.texto-salon p {
+  margin-bottom: 15px;
+  /* Separación entre párrafos */
+  line-height: 1.6;
+  /* Altura de línea para buena lectura */
+}
+
+/* ---------- para los horarios disponibles ---------- */
+.texto-salon ul {
+  list-style: none;
+  /* Quita los puntos de la lista */
+  padding-left: 0;
+  /* Quita el margen izquierdo */
+  display: flex;
+  /* Acomoda los horarios en una fila */
+  flex-wrap: wrap;
+  /* Permite que los ítems pasen a otra fila si no entran */
+  gap: 15px 40px;
+  /* Espacio entre ítems en filas y columnas */
+}
+
+/* ---------- para horarios ---------- */
+.texto-salon li {
+  font-weight: bold;
+  /* Los horarios se ven destacados */
+}
+
+/* ---------- para la galeria de imagenes ---------- */
+
+.galeria-salon {
+
+  display: grid;
+  /* Organiza las imágenes en grilla */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas iguales */
+  gap: 10px;
+  /* Espacio entre imágenes */
+  flex: 1 1 250px;
+  /* Al igual que el texto, ocupa espacio proporcional */
+}
+
+/* ---------- para cada imagen ---------- */
+.galeria-salon img {
+  width: 100%;
+  /* La imagen ocupa todo el ancho de su contenedor */
+  height: 100%;
+  /* Se adapta manteniendo la proporción */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  /* Sombra sutil para dar profundidad */
+  object-fit: cover;
+  /* Asegura que la imagen cubra bien el espacio */
+  cursor: pointer;
+  /*cursor manito*/
+}
+
+/*efecto hover*/
+.galeria-salon :hover {
+  /* background-color: rgba(0, 0, 0, 0.2);
+   Oscurece al pasar el mouse */
+  transform: scale(1.05);
+  /* Hace crecer ligeramente la sección */
+  transition: 0.3s ease;
+  /* Transición suave */
+
+}
+
+/*hasta aqui son los estilos del aside de contenedor principal dentro de cada articulo del aside de servicios/salones para poder poner texto e imagenes*/
+
+
+
+
+
+
+
+/*-----------estilos para el mapa de cada descripcion de  salon dentro de aside de servicios /salones ------*/
+
+
+.mapa-salon {
+  margin-top: 50px;
+
+  width: 100%;
+  max-width: 600px;
+  /* límite si estás en pantalla grande */
+}
+
+
+
+
+
+
+
+
+/*___________________________estilos para seccion menu lista disponible_____________*/
+
+
+
+/* Estilo general del contenedor aside */
+
+.menupagina { /*clase dentro del aside*/
+
+  padding: 1em;
+  /* Espaciado interno de 1 unidad (16px aprox) */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  max-width: 800px;
+  /* Máximo ancho del contenedor */
+  margin: auto;
+  /* Centra horizontalmente el <aside> en la página */
+}
+
+/* Estilo de cada plato articulo */
+.categoriaservicio {
+  border-bottom: 1px solid #ccc;
+  /* Línea separadora gris debajo de cada artículo */
+  padding: 1em 0;
+  /* Espaciado vertical (arriba y abajo) */
+  display: flex;
+  /* Usamos flexbox para controlar el diseño */
+  flex-direction: column;
+  /* Por defecto, el contenido se apila en columna (ideal para móvil) */
+  gap: 0.5em;
+  /* Espacio entre los elementos internos del artículo */
+}
+
+/* Estilo para la imagen del plato */
+.categoriaservicio img {
+  width: 100%;
+  /* La imagen ocupa el 100% del ancho del contenedor (responsiva) */
+  height: auto;
+  /* Mantiene la proporción original de la imagen */
+  border-radius: 8px;
+  /* Bordes redondeados */
+}
+
+/* Estilo para el precio */
+.precio {
+  background: orange;
+  /* Fondo naranja llamativo */
+  color: white;
+  /* Texto blanco */
+  padding: 0.5em;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  font-weight: bold;
+  /* Texto en negrita */
+  display: inline-block;
+  /* Permite aplicar padding y mantener el tamaño ajustado al contenido */
+}
+
+
+
+
+
+
+
+/* MEDIA QUERY: diseño para pantallas más grandes desde 768px en adelante */
+@media (min-width: 768px) {
+  .categoriaservicio {
+    flex-direction: row;
+    /* En pantallas grandes, el contenido va en fila (imagen a la izquierda, texto a la derecha) */
+    align-items: flex-start;
+    /* Alinea el contenido al tope verticalmente */
+  }
+
+  .categoriaservicio img {
+    width: 40%;
+    /* Imagen ocupa el 40% del ancho del artículo */
+    margin-right: 1em;
+    /* Espacio entre la imagen y el texto */
+  }
+
+  .categoriaservicio div {
+    flex: 1;
+    /* El bloque de texto ocupa el resto del espacio disponible */
+  }
+}
+
+
+
+
+
+/* Media query para pantallas medianas (tamaño tablet y menor)para catalogo  */
+@media (max-width: 1024px) {
+  .catalogocongrid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+  }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .catalogocongrid {
+    grid-template-columns: 1fr;
+    /* 1 columna */
+  }
+}
+/*
+_______________________________________________________________________________________
+___________________________ AQUI TERMINA PAGINA PRINCIPAL SERVICIOS DE JORGELINA MENDIETA PARA SEGUNDA ENTREGA DEL TP ____________________________
+____________________________________________________________________________________________*/

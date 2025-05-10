@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Header actualizado -->
+    <header class="yamila-header container-fluid py-3 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="yamila-empresa">IDW S.A</div>
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="presupuesto.html">PRESUPUESTO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+     <!--dentro de estructura section ubicamos el carrusel con imagenes de la tematica juegos -->
+     <section>
+        <!-- Carousel con bootstrap -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active position-relative">
+                    <img src="../imagenes/imgservicios/portadajuegos1.jpg" class="d-block w-100 img-fluid">
+                    <div class="transparencia"></div><!--para poner transparencia-->
+                    <div class="carousel-caption">
+                        <h3>Alquileres</h3>
+                        <p> momentos inolvidables</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../imagenes/imgservicios/portadajuegos.jpg" class="d-block w-100 img-fluid">
+                </div>
+                <div class="carousel-item">
+                    <img src="../imagenes/imgservicios/portadajuegos3.jpg" class="d-block w-100 img-fluid">
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+
+    <!--utilizamos aside para la descripcion del juegos disponible-->
+    <aside>
+
+        <h2>Alquileres Disponibles</h2>
+
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/minicastillo.JPG">
+            <div>
+                <h3>Castillo princesa</h3>
+                <p><strong>Descripcion:</strong> El sueño de toda princesa cobra vida con nuestro Minicastillo Rosa
+                    Princesa! Diseñado especialmente para las pequeñas, este castillo inflable combina el color rosa
+                    con detalles mágicos, creando el escenario perfecto para una fiesta de cuento de hadas.
+                </p>
+                <p><strong>Categoría:</strong> Inflables</p>
+
+                <p class="precio">Desde $10000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+
+        <!--segundo articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/inflablebebes.jpg">
+            <div>
+                <h3>Inflable Bebes</h3>
+                <p><strong>Descripcion:</strong> El primer salto de tu bebé será lleno de diversión con nuestro
+                    Inflable para Bebés! Diseñado especialmente para los más pequeños, este inflable es perfecto
+                    para introducir a los bebés al mundo de los juegos en un entorno seguro y suave.
+                </p>
+                <p><strong>Categoría:</strong> Inflables</p>
+
+                <p class="precio">Desde $10000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+        <!--segundo articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/inflablepelotas.jpg">
+            <div>
+                <h3>Inflable con pelotas</h3>
+                <p><strong>Descripcion:</strong> Diversión sin fin para los más pequeños con nuestro Inflable de
+                    Pelotas! Este juego es perfecto para que los niños disfruten de horas de entretenimiento
+                    mientras se sumergen en un mar de pelotas de colores, creando un ambiente seguro y lleno de
+                    risas
+                </p>
+                <p><strong>Categoría:</strong> Inflables</p>
+
+                <p class="precio">Desde $10000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+
+        <!--tercer articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/gliter bar.jpeg">
+            <div>
+                <h3>Gliter Bar</h3>
+                <p><strong>Descripcion:</strong> Haz brillar la fiesta con nuestro espectacular Glitter Bar! Una
+                    opción única y divertida donde los niños (y adultos) pueden crear su propio estilo brillante y
+                    deslumbrante. Con nuestro Glitter Bar, la creatividad y el brillo no tienen límites.
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+
+        <!--cuarto articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/disfraces.jpg">
+            <div>
+                <h3>Disfraces</h3>
+                <p><strong>Descripcion:</strong>
+                    Convierte cualquier fiesta en una experiencia mágica con nuestra amplia colección de disfraces
+                    para niñas, niños y hasta adultos. Ya sea para cumpleaños temáticos, shows o actividades
+                    escolares, tenemos el traje ideal para hacer volar la imaginación. Todos los disfraces están en
+                    excelente estado, lavados y listos para usar. ¡Solo tenés que elegir el tuyo y disfrutar del
+                    evento!
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+
+        <!--quinto articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/globologia.jpg">
+            <div>
+                <h3>Globologia</h3>
+                <p><strong>Descripcion:</strong>
+                    Dale color, alegría y un toque único a tus eventos con nuestras creaciones en globología.
+                    Realizamos desde simples adornos hasta estructuras temáticas elaboradas, perfectas para
+                    cumpleaños, bautismos, comuniones y todo tipo de celebraciones. Usamos globos de excelente
+                    calidad y ofrecemos opciones personalizadas según la temática del evento.
+
+
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+        <!--sexto articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/plazablanda.JPG">
+            <div>
+                <h3>Plaza Blanda</h3>
+                <p><strong>Descripcion:</strong>
+                    Espacio seguro y divertido para los más pequeños
+                    Nuestra plaza blanda es ideal para que bebés y niños pequeños jueguen libremente en un entorno
+                    acolchonado, seguro y lleno de estímulos. Incluye juegos didácticos, rampas, túneles, peloteros,
+                    bloques y más. Perfecta para cumpleaños, bautismos y eventos donde se necesita un sector
+                    especial para la primera infancia. Todo el material es desinfectado y en excelente estado.
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+        <!--septimo articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/dj.jpg">
+            <div>
+                <h3>Dj</h3>
+                <p><strong>Descripcion:</strong>
+                    Música, juegos y diversión garantizada
+                    Nuestro DJ especializado en fiestas infantiles se encarga de crear el ambiente perfecto para que
+                    todos se diviertan: desde los más chicos hasta los adultos. Con repertorio musical acorde a cada
+                    edad, animación, efectos de sonido y juegos interactivos. Ideal para cumpleaños, comuniones,
+                    egresos y eventos familiares. Equipos de sonido profesionales, luces y micrófono incluidos.
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+        <!--octavo articulo-->
+        <article class="categoriaservicio">
+
+            <img src="../imagenes/imgservicios/animadora.JPG">
+            <div>
+                <h3>Animadoras</h3>
+                <p><strong>Descripcion:</strong>
+                    Música, juegos y diversión garantizada
+                    Nuestro DJ especializado en fiestas infantiles se encarga de crear el ambiente perfecto para que
+                    todos se diviertan: desde los más chicos hasta los adultos. Con repertorio musical acorde a cada
+                    edad, animación, efectos de sonido y juegos interactivos. Ideal para cumpleaños, comuniones,
+                    egresos y eventos familiares. Equipos de sonido profesionales, luces y micrófono incluidos.
+                </p>
+                <p><strong>Categoría:</strong> animacion</p>
+
+                <p class="precio">Desde $15000</p>
+                <p class="precio">Las 3hs</p>
+            </div>
+        </article>
+
+
+
+
+
+    </aside>
+
+
+    </main>
+
+
+
+
+
+
+    <!-- Footer actualizado -->
+    <footer class="yamila-footer container-fluid text-center py-3">
+        <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+    </footer>
+
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
