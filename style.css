@@ -829,6 +829,175 @@ ________________________________________________________________________________
 /*--------------------------------------termina seccion nosotros-----------------------------------*/
 
 
+/*______________________SECCIÓN CONTACTO ROCIO BARRIA___________________________________*/
 
+/* Fondo con imagen, ocupa toda la pantalla */
+body {
+  background-image: url('./imagenes/fondo-PRESUPUESTO.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+  margin: 0; 
+  padding: 0;
+  font-family: 'Roboto', sans-serif; 
+}
+
+/* Sección principal del formulario */
+.formulario-contacto {
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Estilos para el formulario */
+.formulario-contacto form {
+  background: rgba(0, 0, 0, 0.6); /* fondo oscuro con transparencia */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+/* Botón enviar del formulario */
+.formulario-contacto .btn-primary {
+  background-color: #ff3ca0;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover del botón enviar */
+.formulario-contacto .btn-primary:hover {
+  background-color: #e02e91;
+}
+
+/* Caja de datos de contacto y horarios */
+.contacto-info,
+.horarios {
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Título de las cajas de contacto y horarios */
+.contacto-info h5,
+.horarios h5 {
+  color: #70b5ff;
+}
+
+/* Caja para redes sociales, con efecto glass */
+.redes-sociales {
+  background: rgba(255, 255, 255, 0.06); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 2rem auto 1.5rem auto; 
+  text-align: center;
+}
+
+/* Título de redes */
+.redes-sociales h4 {
+  color: var(--gris-oscuro);
+  margin-bottom: 1.5rem;
+}
+
+/* Botones de redes (círculos con íconos) */
+.redes-sociales .btn {
+  background-color: rgb(235, 217, 217);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Hover para botones de redes */
+.redes-sociales .btn:hover {
+  background-color: var(--verde);
+  border-color: var(--verde);
+  transform: scale(1.05);
+}
+
+/* Íconos dentro de los botones */
+.redes-sociales .btn img {
+  transition: transform 0.3s ease;
+}
+
+/* Efecto zoom al pasar el mouse por el ícono */
+.redes-sociales .btn:hover img {
+  transform: scale(1.2);
+}
+
+/* Contenedor del mapa */
+.mapa-full {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+}
+
+/* Estilos del iframe del mapa */
+.mapa-full iframe {
+  width: 100%;
+  height: 400px; 
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo del menú activo */
+.nav-link.active {
+  color: #ff3ca0 !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255, 60, 160, 0.3);
+  transition: color 0.3s ease;
+}
+
+/* Hover del menú */
+.nav-link:hover {
+  color: #ff3ca0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario-contacto {
+    padding: 40px 15px;
+  }
+
+  .contacto-info, .horarios {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .contacto-info p, .horarios p {
+    font-size: 0.9rem;
+  }
+
+  .mapa-full iframe {
+    height: 300px;
+  }
+
+  .redes img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .formulario-contacto {
+    padding: 30px 15px;
+  }
+
+  .contacto-info, .horarios {
+    margin-top: 15px;
+  }
+}
 
 
