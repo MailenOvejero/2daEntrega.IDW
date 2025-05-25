@@ -697,6 +697,105 @@ ________________________________________________________________________________
 ___________________________ AQUI TERMINA PAGINA PRINCIPAL SERVICIOS DE JORGELINA MENDIETA PARA SEGUNDA ENTREGA DEL TP ____________________________
 ____________________________________________________________________________________________*/
 
+
+
+
+
+
+
+/*__________________tercera entrega estilos de formulario para iniciar sesion______________*/
+.sesionadmi {
+  /*clase del formulario iniciar sesion*/
+
+  background-color: white;
+  padding: 35px;
+  margin: 50px auto;
+  width: 550px;
+  border: 1px solid #ccc;
+  font-size: 19px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.sesionadmi h2{
+  text-align: center;
+}
+/*clase para los label del form*/
+.datos{
+  display: block;
+  margin-top: 10px;
+  color: #555; 
+  font-weight: 600;
+}
+
+/*clase para los input de label*/
+.datossesion{
+width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.botonenviar{
+   margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color:#EBD8DC;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/*class crear cuenta es para el p dentro del form*/
+.crearcuenta{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.crearcuenta a {
+  color:#EBD8DC;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.crearcuenta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .sesionadmi {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .datossesion {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .botonenviar {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .crearcuenta {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
 /*-----------------------------ESTILOS SECCION NOSOTROS-------------------------------- -----------------*/
 
 .fondo {
