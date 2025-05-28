@@ -800,7 +800,7 @@ width: 100%;
 
 .fondo {
   background-attachment: fixed;
-  background-image: url("imagenes/imgnosotros/fondo-focos.avif");
+  background-image: url("./imagenes/fondo-PRESUPUESTO.jpg");
   z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
   background-size: cover;
   background-position: center;
@@ -1098,5 +1098,39 @@ body {
     margin-top: 15px;
   }
 }
+
+/*-------------------- Estilos para el ícono inicio sesion ------------------------*/
+
+.login-item {
+  margin-left: auto;
+  }
+
+.login-item .nav-link {
+  color: #ffe96c ; /* Amarillo dorado */
+  font-weight: bold;
+  position: relative;
+}
+
+.login-item .nav-link:hover {
+  color: #ebcf7a ; /* Un tono más suave al pasar el mouse */
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip-inner {
+  background-color: yellow !important; /* Fondo del tooltip */
+  color: black !important;             /* Texto del tooltip */
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: yellow !important;
+}
+
+
 
 

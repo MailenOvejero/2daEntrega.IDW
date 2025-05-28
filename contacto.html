@@ -14,6 +14,8 @@
 <!-- Nuestros estilos -->  
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="contacto.css" />
+<!-- Iconos de Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="contacto">
@@ -32,6 +34,11 @@
             <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
             <li class="nav-item"><a class="nav-link" href="presupuesto.html">PRESUPUESTO</a></li>
             <li class="nav-item"><a class="nav-link active" href="contacto.html">CONTACTO</a></li>
+            <li class="nav-item login-item">
+              <a class="nav-link" href="iniciosesion.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Iniciar sesión">
+                <i class="fas fa-sign-in-alt"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -130,5 +137,9 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
 </body>
 </html>
