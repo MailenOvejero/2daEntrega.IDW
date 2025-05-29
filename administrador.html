@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Administrador - IDW S.A</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
+
 <body>
 
   <header class="yamila-header container-fluid py-3 sticky-top bg-dark text-white">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="yamila-empresa h4 mb-0 text-white">Panel de Administración</div>
-      <div>
+      
+        <div class="text-center my-4">
+  <a href="salones.html" target="_blank" class="btn btn-info btn-lg">
+    Ver Salones
+  </a>
+</div><div>
+
         <span class="me-3">Usuario: <strong id="usuarioActivo"></strong></span>
         <button id="cerrarSesionBtn" class="btn btn-outline-light btn-sm">Cerrar sesión</button>
       </div>
-    </div>
+
   </header>
 
   <main class="container my-4">
@@ -63,6 +71,20 @@
       <tbody></tbody>
     </table>
   </main>
+  <h2>Salones Preestablecidos</h2>
+  <table class="table table-striped" id="tablaSalonesPredefinidos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Capacidad</th>
+        <th>Ubicación</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <footer class="yamila-footer container-fluid text-center py-3">
     <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
@@ -72,4 +94,5 @@
   <script src="administrador.js"></script>
 
 </body>
+
 </html>
