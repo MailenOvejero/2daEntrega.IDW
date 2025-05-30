@@ -228,3 +228,4 @@ document.getElementById("formSalon").addEventListener("submit", function (e) {
   };
   reader.readAsDataURL(archivoImagen);
 });
+document.getElementById("cerrarSesionBtn").onclick = cerrarSesion;
