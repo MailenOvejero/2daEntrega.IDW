@@ -14,7 +14,8 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -49,7 +50,7 @@ header.yamila-header {
 .yamila-header .navbar-nav {
   display: flex;
   justify-content: center;
-  gap: 2rem; 
+  gap: 2rem;
 }
 
 .yamila-header .nav-link {
@@ -66,7 +67,7 @@ header.yamila-header {
 
 /* Fondo con imagen para la sección de Presupuesto */
 .yamila-presupuesto {
-  background-image: url('./imagenes/fondo-PRESUPUESTO.jpg'); 
+  background-image: url('./imagenes/fondo-PRESUPUESTO.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,7 +85,8 @@ header.yamila-header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+  background: rgba(0, 0, 0, 0.5);
+  /* Ajusta la opacidad según necesites */
   z-index: -1;
 }
 
@@ -162,7 +164,9 @@ footer.yamila-footer {
 
 /* Ajustes para móvil */
 @media (max-width: 576px) {
-  html, body {
+
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -203,20 +207,24 @@ footer.yamila-footer {
   }
 
   #navbarNav {
-    background: rgba(0, 0, 0, 0.9);
+    margin-top: 40px;
+    background:#0d0c0b43;
     padding: 15px;
     text-align: center;
+    
   }
 
   .navbar-nav {
     flex-direction: column;
     align-items: center;
+   
   }
 
   .navbar-nav .nav-link {
     font-size: 1.2rem;
     color: var(--rosa-vibrante);
     transition: color 0.3s ease;
+     
   }
 
   .navbar-nav .nav-link:hover {
@@ -226,8 +234,9 @@ footer.yamila-footer {
   .navbar-toggler {
     position: absolute;
     right: 15px;
-    top: 15px;
+    top: 5px;
     display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -320,18 +329,18 @@ ________________________________________________________________________________
 
   grid-template-columns: repeat(3, 1fr);
   /* 3 columnas en pantallas grandes */
-  gap: 20px;
+  gap: 10px;
   /* Espacio entre las secciones */
   padding: 20px;
   /* Espacio alrededor del contenedor */
+  
 }
 
 
 
 /* Estilo común para cada sección (articulo) dentro del catalogo principal en home servicios*/
 .seccionservicios {
-  background: linear-gradient(45deg, #8ED9DE, #EBD8DC, #BFDCE4, #EAC888);
-  ;
+
   /*  background-color: rgba(0, 0, 0, 0.1);
   Fondo claro para cada sección */
   padding: 20px;
@@ -350,8 +359,7 @@ ________________________________________________________________________________
 .seccionservicios:hover {
   background-color: rgba(0, 0, 0, 0.2);
   /* Oscurece al pasar el mouse */
-  transform: scale(1.05);
-  /* Hace crecer ligeramente la sección */
+
   transition: 0.3s ease;
   /* Transición suave */
 
@@ -360,15 +368,10 @@ ________________________________________________________________________________
 /*estilos para las imagenes dentro de cada seccion (articulo) dentro del catalogo principal en home servicios*/
 .seccionservicios img {
   width: 100%;
-  /* La imagen ocupa todo el ancho del artículo */
   height: auto;
-  /* Mantiene proporción */
   border-radius: 8px;
-  /* Bordes redondeados iguales al contenedor */
   margin-bottom: 10px;
-  /* Espacio entre la imagen y el texto */
   object-fit: cover;
-  /* Ajuste si necesitás que se recorte bien */
 }
 
 
@@ -377,22 +380,13 @@ ________________________________________________________________________________
 
 .botonservicios {
   display: inline-block;
-  /* Permite aplicar ancho y alto como si fuera un botón */
   padding: 10px 20px;
-  /* Espaciado interno para agrandar el botón */
   background: white;
-  /* fondo degradado */
   color: rgb(88, 88, 88);
-  /* Texto blanco */
   text-decoration: none;
-  /* Quita el subrayado del enlace */
   border-radius: 5px;
-  /* Bordes redondeados */
   font-weight: bold;
-  /* Texto en negrita */
   transition: background-color 0.3s ease;
-  /* Efecto suave al pasar el mouse */
-  /* Sombra para que se note mejor */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -400,7 +394,6 @@ ________________________________________________________________________________
   background-color: #EBD8DC;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
-  /* Hace crecer ligeramente la sección */
   transition: 0.3s ease;
   /* Transición suave */
 }
@@ -415,13 +408,9 @@ ________________________________________________________________________________
 
 .descripcionservicio {
   margin-top: 2rem;
-  /* Espacio arriba */
   padding: 1rem 4rem;
-  /* 1rem arriba/abajo, 2rem izquierda/derecha */
   max-width: 1200px;
-  /* Opcional: limita el ancho del texto */
   margin-left: auto;
-  /* Centra horizontalmente */
   margin-right: auto;
   /* Centra horizontalmente */
 }
@@ -432,20 +421,13 @@ ________________________________________________________________________________
 /*-----------estilos para la descripcion de cada salon disponible en la estructura aside de servicios/salones --------*/
 
 /*donde se describe cada salon disponible*/
-.serviciodesalones {
-  /*clase principal del aside*/
+ .serviciodesalones {
+ /*clase principal del aside*/
   padding: 40px 5%;
-  /* Espaciado interior arriba/abajo 40px, a los lados 5% */
 
-
-  background: linear-gradient(45deg, #8ED9DE, #EBD8DC, #BFDCE4);
-  /* fondo degradado */
-  ;
 
   color: rgb(88, 88, 88);
-  /* Texto blanco */
   font-family: 'Segoe UI', sans-serif;
-  /* Tipografía moderna y legible */
 }
 
 
@@ -465,14 +447,21 @@ ________________________________________________________________________________
 
 
 /* ---------- contenedor principal dentro de cada articulo del aside de servicios/salones para poder poner texto e imagenes ---------- */
+
 .contenido-salon {
-  display: flex;
-  /* Ubica el texto y las imágenes uno al lado del otro */
-  flex-wrap: wrap;
-  /* Permite que se acomoden en columna si no entra horizontal */
-  gap: 40px;
-  /* Espacio entre el texto y las imágenes */
+  /*la que esta dentro de estructura aside */
+  display: grid;
+  margin-left: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas en pantallas grandes */
+  gap: 10px;
+  /* Espacio entre las secciones */
+  padding: 10px;
+  /* Espacio alrededor del contenedor */
+  
+ 
 }
+
 
 /* ---------- texto que utilizamos ---------- */
 .texto-salon {
@@ -569,22 +558,6 @@ ________________________________________________________________________________
 
 
 
-/*-----------estilos para el mapa de cada descripcion de  salon dentro de aside de servicios /salones ------*/
-
-
-.mapa-salon {
-  margin-top: 50px;
-
-  width: 100%;
-  max-width: 600px;
-  /* límite si estás en pantalla grande */
-}
-
-
-
-
-
-
 
 
 /*___________________________estilos para seccion menu lista disponible_____________*/
@@ -593,7 +566,8 @@ ________________________________________________________________________________
 
 /* Estilo general del contenedor aside */
 
-.menupagina { /*clase dentro del aside*/
+.menupagina {
+  /*clase dentro del aside*/
 
   padding: 1em;
   /* Espaciado interno de 1 unidad (16px aprox) */
@@ -691,7 +665,12 @@ ________________________________________________________________________________
     grid-template-columns: 1fr;
     /* 1 columna */
   }
+  .contenido-salon{
+     grid-template-columns: 1fr;
+     margin-left: 8px;
+  }
 }
+
 /*
 _______________________________________________________________________________________
 ___________________________ AQUI TERMINA PAGINA PRINCIPAL SERVICIOS DE JORGELINA MENDIETA PARA SEGUNDA ENTREGA DEL TP ____________________________
@@ -716,20 +695,22 @@ ________________________________________________________________________________
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-.sesionadmi h2{
+
+.sesionadmi h2 {
   text-align: center;
 }
+
 /*clase para los label del form*/
-.datos{
+.datos {
   display: block;
   margin-top: 10px;
-  color: #555; 
+  color: #555;
   font-weight: 600;
 }
 
 /*clase para los input de label*/
-.datossesion{
-width: 100%;
+.datossesion {
+  width: 100%;
   padding: 10px;
   margin-top: 5px;
   font-size: 16px;
@@ -738,11 +719,11 @@ width: 100%;
   box-sizing: border-box;
 }
 
-.botonenviar{
-   margin-top: 20px;
+.botonenviar {
+  margin-top: 20px;
   padding: 12px;
   width: 100%;
-  background-color:#EBD8DC;
+  background-color: #EBD8DC;
   color: black;
   border: none;
   font-size: 16px;
@@ -751,7 +732,7 @@ width: 100%;
 }
 
 /*class crear cuenta es para el p dentro del form*/
-.crearcuenta{
+.crearcuenta {
   margin-top: 15px;
   text-align: center;
   font-size: 14px;
@@ -759,7 +740,7 @@ width: 100%;
 }
 
 .crearcuenta a {
-  color:#EBD8DC;
+  color: #EBD8DC;
   text-decoration: none;
   font-weight: 600;
 }
@@ -801,7 +782,8 @@ width: 100%;
 .fondo {
   background-attachment: fixed;
   background-image: url("./imagenes/fondo-PRESUPUESTO.jpg");
-  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  z-index: -1;
+  /* Asegura que el pseudo-elemento esté detrás del contenido */
   background-size: cover;
   background-position: center;
 }
@@ -839,12 +821,12 @@ width: 100%;
 
 .content .beneficios-h2 {
   text-align: center;
-  margin:0;
+  margin: 0;
   padding: 0;
   margin-bottom: 10px;
   font-family: 'pacifico', cursive;
   font-size: 2rem;
-  color: #a64ca6; 
+  color: #a64ca6;
 }
 
 .content p {
@@ -857,11 +839,11 @@ width: 100%;
 
 #historia .historia-h2 {
   text-align: center;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   padding: 0;
   font-family: 'pacifico', cursive;
   font-size: 2rem;
-  color: #b89602; 
+  color: #b89602;
 }
 
 .fondo-conocenos {
@@ -936,10 +918,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; 
-  margin: 0; 
+  min-height: 100vh;
+  margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Sección principal del formulario */
@@ -950,7 +932,8 @@ body {
 
 /* Estilos para el formulario */
 .formulario-contacto form {
-  background: rgba(0, 0, 0, 0.6); /* fondo oscuro con transparencia */
+  background: rgba(0, 0, 0, 0.6);
+  /* fondo oscuro con transparencia */
   padding: 40px 20px;
   border-radius: 10px;
 }
@@ -972,7 +955,7 @@ body {
 .contacto-info,
 .horarios {
   margin-top: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
@@ -987,7 +970,7 @@ body {
 
 /* Caja para redes sociales, con efecto glass */
 .redes-sociales {
-  background: rgba(255, 255, 255, 0.06); 
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 2rem;
@@ -995,7 +978,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem 1rem;
   max-width: 700px;
-  margin: 2rem auto 1.5rem auto; 
+  margin: 2rem auto 1.5rem auto;
   text-align: center;
 }
 
@@ -1039,16 +1022,16 @@ body {
   margin: 0 auto;
   padding: 0;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 /* Estilos del iframe del mapa */
 .mapa-full iframe {
   width: 100%;
-  height: 400px; 
+  height: 400px;
   border: none;
   border-radius: 0px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo del menú activo */
@@ -1070,12 +1053,14 @@ body {
     padding: 40px 15px;
   }
 
-  .contacto-info, .horarios {
+  .contacto-info,
+  .horarios {
     margin-top: 20px;
     text-align: center;
   }
 
-  .contacto-info p, .horarios p {
+  .contacto-info p,
+  .horarios p {
     font-size: 0.9rem;
   }
 
@@ -1094,7 +1079,8 @@ body {
     padding: 30px 15px;
   }
 
-  .contacto-info, .horarios {
+  .contacto-info,
+  .horarios {
     margin-top: 15px;
   }
 }
@@ -1103,16 +1089,18 @@ body {
 
 .login-item {
   margin-left: auto;
-  }
+}
 
 .login-item .nav-link {
-  color: #ffe96c ; /* Amarillo dorado */
+  color: #ffe96c;
+  /* Amarillo dorado */
   font-weight: bold;
   position: relative;
 }
 
 .login-item .nav-link:hover {
-  color: #ebcf7a ; /* Un tono más suave al pasar el mouse */
+  color: #ebcf7a;
+  /* Un tono más suave al pasar el mouse */
 }
 
 .tooltip.show {
@@ -1120,13 +1108,16 @@ body {
 }
 
 .tooltip-inner {
-  background-color: yellow !important; /* Fondo del tooltip */
-  color: black !important;             /* Texto del tooltip */
+  background-color: yellow !important;
+  /* Fondo del tooltip */
+  color: black !important;
+  /* Texto del tooltip */
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 5px;
   margin-top: 2px;
 }
+
 .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
   border-bottom-color: yellow !important;
 }

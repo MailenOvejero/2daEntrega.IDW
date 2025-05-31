@@ -54,7 +54,7 @@ function mostrarSalones() {
             <li>19:00 pm - 22:00pm</li>
             <li>22:00 pm - 01:00am</li>
           </ul>
-          <a href="#auraid" class="botonservicios">Solicitar presupuesto</a>
+          <a href="presupuesto.html" class="botonservicios">Solicitar presupuesto</a>
         </div>
         <div class="imagen-salon">
           <img src="${salon.imagen}" alt="Imagen de ${salon.nombre}" style="max-width:100%; border-radius: 10px;">
