@@ -683,6 +683,18 @@ ________________________________________________________________________________
 
 
 /*__________________tercera entrega estilos de formulario para iniciar sesion______________*/
+
+.incio-cuenta{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+  margin: 0;
+}
+
+.cuenta-inicio{
+  flex: 1;
+}
+
 .sesionadmi {
   /*clase del formulario iniciar sesion*/
 
