@@ -15,6 +15,9 @@ Carpeta principal que contiene los archivos del trabajo práctico.
 - **Estilos**:
   - `style.css` (Archivo CSS principal)
 
+
+  
+
 ## Segunda Entrega - Mejoras Implementadas
 
 ### Objetivos
@@ -37,3 +40,40 @@ En esta segunda entrega, se incorporaron mejoras para aplicar técnicas avanzada
 - Trabajo realizado en grupo, indicando los nombres de los integrantes en un archivo .txt
 - Repositorio disponible en GitHub/GitLab, cargado en el Campus Virtual.
 - Entrega dentro de la fecha límite establecida.
+
+
+
+
+## Tercera Entrega - Aplicación Web Interactiva
+
+### Objetivos
+En esta tercera etapa se buscó transformar el sitio web en una **aplicación web interactiva**, incorporando funcionalidades dinámicas con JavaScript, gestión del DOM, uso de formularios HTML y persistencia de datos mediante LocalStorage. Se aplicaron todos los conocimientos adquiridos durante el cuatrimestre, enfocándonos en mejorar la experiencia del usuario y permitir la **administración completa de los salones de eventos**.
+
+### Requerimientos Cumplidos
+- **Gestión completa de salones de eventos**:
+  - Funcionalidades de **Listar, Crear, Visualizar, Modificar y Eliminar** salones.
+  - Uso de formularios HTML adaptados a cada tipo de dato.
+  - Visualización de los salones en una **tabla HTML** en la vista de administración.
+
+- **Persistencia de datos con LocalStorage**:
+  - Los salones agregados o modificados se guardan permanentemente en el navegador del usuario.
+  - Se definió una constante en un archivo JavaScript para inicializar el LocalStorage la primera vez que se carga el sitio.
+  - El catálogo de salones se actualiza dinámicamente a partir de los datos almacenados en LocalStorage.
+
+- **Interactividad con JavaScript**:
+  - Manipulación del DOM para actualizar vistas sin recargar la página.
+  - Validaciones básicas en los formularios.
+  - Posibilidad de cargar imágenes y modificarlas.
+
+### Funcionalidad Extra (Opcional)
+- Aunque no se crearon secciones separadas para “Servicios” o “Imágenes” con CRUD, se implementó dentro de la vista de **salones** la posibilidad de:
+  - **Modificar la imagen de cada salón**, ya sea preestablecido o cargado por el usuario.
+  - **Eliminar completamente cualquier salón**, incluyendo su imagen y datos.
+
+Esto cumple parcialmente con el requerimiento opcional, integrando la gestión de imágenes directamente en la administración de salones.
+
+### Tecnologías Utilizadas
+- **HTML5**: Estructura del contenido y formularios.
+- **CSS3 + Bootstrap 5**: Estilos, maquetación responsiva y componentes reutilizables.
+- **JavaScript (vanilla)**: Lógica para interactividad, manipulación del DOM y uso de LocalStorage.
+- **LocalStorage API**: Almacenamiento de datos en el navegador.
