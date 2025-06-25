@@ -11,7 +11,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -31,11 +30,8 @@
                         <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
                         <li class="nav-item"><a class="nav-link" href="presupuesto.html">PRESUPUESTO</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                        <li class="nav-item login-item">
-                            <a class="nav-link" href="iniciosesion.html" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" title="Iniciar sesión">
-                                <i class="fas fa-sign-in-alt"></i>
-                            </a>
+                        <li class="nav-item login-item" id="botonSesion">
+                            <!-- Este contenido se reemplazará con JavaScript según si hay sesión activa -->
                         </li>
                     </ul>
                 </div>
@@ -44,10 +40,7 @@
     </header>
 
     <main>
-        <!--comenzamos con estructura semantica section para hacer un carrusel de fotos utilizando bootstrap-->
         <section>
-
-
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
                 <!-- Indicators/dots -->
@@ -61,16 +54,15 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active position-relative">
                         <img src="imagenes/imgservicios/infantil1.jpg" class="d-block w-100 img-fluid">
-                        <div class="transparencia"></div><!--para poner transparencia-->
+                        <div class="transparencia"></div>
                         <div class="carousel-caption">
                             <h3>Los mejores salones </h3>
-                            <p>Diferentes tematicas</p>
+                            <p>Diferentes temáticas</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="imagenes/imgservicios/lujosas2.jpg" class="d-block w-100 img-fluid">
                     </div>
-
                     <div class="carousel-item">
                         <img src="imagenes/imgservicios/infantil3.jpg" class="d-block w-100 img-fluid">
                     </div>
@@ -84,72 +76,53 @@
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
-
         </section>
-
-
-
-        <!--comenzamos con el estructurado de catalogo de cada seccion disponible utilizando aside y article
-
-        <section class="catalogocongrid">
-            <article class="seccionservicios">
-                <img src="imagenes/imgservicios/saloninfantil.png">
-                <h3>Infantiles</h3>
-                <a href="#salonesinfantiles" class="botonservicios">Ver Más</a>
-            </article>
-
-            <article class="seccionservicios">
-                <img src="imagenes/imgservicios/boda.png" alt="">
-                <h3>Bodas</h3>
-                <a href="#salonesboda" class="botonservicios">Ver Más</a>
-            </article>
-
-            <article class="seccionservicios">
-                <img src="imagenes/imgservicios/general.jpg" alt="">
-                <h3>General</h3>
-                <a href="#salonesgeneral" class="botonservicios">Ver Más</a>
-
-
-
-        </section>
-    -->
-
-
 
         <aside>
             <div id="salonesinfantiles" class="descripcionservicio">
                 <h2>Catálogo de Salones Disponibles</h2>
-
                 <p>"Un espacio mágico donde los sueños de los más pequeños cobran vida, la diversión nunca termina y
-                    cada
-                    rincón está pensado para celebrar momentos únicos, seguros y llenos de alegría junto a la familia y
-                    los
-                    amigos."</p>
+                    cada rincón está pensado para celebrar momentos únicos, seguros y llenos de alegría junto a la
+                    familia y los amigos."</p>
             </div>
             <article>
                 <div id="contenedorSalones" class="grid-salones"></div>
             </article>
-
         </aside>
-
-
-
     </main>
+
     <!-- Footer actualizado -->
     <footer class="yamila-footer container-fluid text-center py-3">
         <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
     </footer>
 
-
-
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="salones.js"></script>
     <script>
+        // Tooltip de Bootstrap
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
-    </script>
 
+        // Mostrar botón según si hay sesión activa
+        document.addEventListener("DOMContentLoaded", () => {
+            const botonSesion = document.getElementById("botonSesion");
+            const token = sessionStorage.getItem("accessToken");
+
+            if (token) {
+                botonSesion.innerHTML = `
+                    <a class="nav-link" href="administrador.html" title="Ir al panel de administración">
+                        <i class="fas fa-user-cog"></i>
+                    </a>`;
+            } else {
+                botonSesion.innerHTML = `
+                    <a class="nav-link" href="iniciosesion.html" data-bs-toggle="tooltip"
+                       data-bs-placement="bottom" title="Iniciar sesión">
+                       <i class="fas fa-sign-in-alt"></i>
+                    </a>`;
+            }
+        });
+    </script>
 </body>
 
 </html>

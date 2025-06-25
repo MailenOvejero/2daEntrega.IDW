@@ -1133,3 +1133,19 @@ body {
 .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
   border-bottom-color: yellow !important;
 }
+
+/****************************************************/
+.card {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card-body {
+  font-size: 0.95rem;
+}
+
+.card-title {
+  color: #343a40;
+  font-weight: bold;
+}

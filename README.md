@@ -77,3 +77,65 @@ Esto cumple parcialmente con el requerimiento opcional, integrando la gestión d
 - **CSS3 + Bootstrap 5**: Estilos, maquetación responsiva y componentes reutilizables.
 - **JavaScript (vanilla)**: Lógica para interactividad, manipulación del DOM y uso de LocalStorage.
 - **LocalStorage API**: Almacenamiento de datos en el navegador.
+
+
+
+
+## 🔷 Cuarta Entrega – Inicio de Sesión y Conexión con API Externa
+
+### Objetivo
+
+Agregar la funcionalidad de inicio de sesión utilizando `JavaScript` y `Fetch API`, conectando el lado cliente con recursos externos. Además, proteger las rutas administrativas y mostrar datos reales desde una API pública.
+
+---
+
+### Qué intenté hacer
+
+Intenté implementar el login real usando la API de DummyJSON: `https://dummyjson.com/auth/login`. Escribí el código con `fetch` y método POST, configurando las cabeceras correctamente y enviando los datos del formulario en formato JSON.
+
+Tenía preparada toda la lógica para guardar el `accessToken` en `sessionStorage`, redirigir al panel si la sesión era válida y bloquear el acceso si no se iniciaba sesión.
+
+---
+
+### Qué problema encontré
+
+A pesar de que el código era correcto, la API devolvía siempre un error 400 con el mensaje `"Invalid credentials"`, incluso usando usuarios y contraseñas que figuran como válidos en la documentación de DummyJSON (como `kminchelle` y `0lelplR`).
+
+Probé en diferentes navegadores, usé Live Server, revisé la estructura del request e incluso armé un proyecto separado solo para testear el login. El problema seguía siendo el mismo. Por eso, entendí que **la API ya no acepta credenciales públicas**, o que ya no responde correctamente con los datos de prueba.
+
+---
+
+### Cómo lo resolví
+
+Para poder seguir avanzando con el desarrollo, dejé el bloque de código real **comentado en el archivo `iniciosesion.js`**, con explicaciones claras dentro del mismo para que se vea que lo implementé, aunque no funcionó por cuestiones externas.
+
+Después, hice una versión **simulada del login**. Usé una lista local con dos usuarios de prueba. Si el nombre de usuario y la contraseña coinciden, se genera un token simulado y se guarda todo en `sessionStorage`. Luego se redirige al panel de administración y se bloquea el acceso a las páginas protegidas en caso de que no haya sesión activa.
+
+---
+
+### Usuarios disponibles para probar el login simulado
+
+- Usuario: `kminchelle`  
+  Contraseña: `0lelplR`  
+
+- Usuario: `emjohnson`  
+  Contraseña: `m4Zwlz`  
+
+---
+
+### Conexión con la API – Listado de usuarios
+
+Una vez iniciada la sesión, se puede acceder a una sección del panel que muestra usuarios reales obtenidos desde la API pública `https://dummyjson.com/users`.
+
+Esta parte sí funciona correctamente porque no requiere autenticación. Se muestran los datos básicos como nombre, usuario, email y ciudad, sin incluir información sensible.
+
+---
+
+### Funcionalidad incluida en esta entrega
+
+- Captura de datos desde formulario
+- Código real de login con `fetch` comentado y explicado
+- Login simulado con validación, token falso y `sessionStorage`
+- Protección de rutas y redirección al iniciar sesión
+- Listado de usuarios reales desde la API (`GET`)
+- Explicación clara del error de la API y la solución aplicada

@@ -1,3 +1,8 @@
+
+if (!sessionStorage.getItem("accessToken")) {
+  window.location.href = "iniciosesion.html";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   validarSesion();
   mostrarSalonesEnTabla();
@@ -8,26 +13,28 @@ const SALONES_KEY = "salonesEventos";
 const SALONES_KEY_PREDEFINIDOS = "salonesPredefinidos";
 
 const SALONES_PREDEFINIDOS = [
-  { id: 1, nombre: "Caritas", capacidad: 80, ubicacion: "Belgrano", descripcion: "Megajuego, alberca de pelotas, laberinto de ligas, toboganes.", imagen: "imagenes/imgservicios/salonvertical.jpg" },
-  { id: 2, nombre: "Travesuras", capacidad: 90, ubicacion: "Pellegrini 865", descripcion: "Juegos para niños, plaza blanda, pantalla temática.", imagen: "imagenes/imgservicios/trave2.jpg" },
-  { id: 3, nombre: "Smile Eventos", capacidad: 100, ubicacion: "Avenida Belgrano 765", descripcion: "Pista de baile, videojuegos, castillo inflable, metegol.", imagen: "imagenes/imgservicios/aura1.jpg" },
-  { id: 4, nombre: "Sueño Eventos", capacidad: 150, ubicacion: "Bolivia 234", descripcion: "Espacio para ceremonia, salón ambientado con luces cálidas, fotocabina.", imagen: "imagenes/imgservicios/boda.png" },
-  { id: 5, nombre: "Amor Eterno", capacidad: 120, ubicacion: "Belgrano", descripcion: "Alberca de pelotas, laberintos, mesa de hockey, toboganes.", imagen: "imagenes/imgservicios/amoreterno.jpg" },
-  { id: 6, nombre: "White Eventos", capacidad: 150, ubicacion: "La Rioja 222", descripcion: "Vista imponente, ambiente sofisticado, catering gourmet, barra de tragos premium.", imagen: "imagenes/imgservicios/white3.jpg" },
-  { id: 7, nombre: "Next Party", capacidad: 200, ubicacion: "Matanza 567", descripcion: "Espacio moderno con pista de luces y sonido envolvente.", imagen: "imagenes/imgservicios/general.jpg" },
-  { id: 8, nombre: "Urban Eventos", capacidad: 180, ubicacion: "La Rioja 222", descripcion: "Diseño elegante, estilo minimalista, ideal para recepciones empresariales.", imagen: "imagenes/imgservicios/urban.jpg" },
-  { id: 9, nombre: "Aura", capacidad: 100, ubicacion: "San Justo 567", descripcion: "Decoración cálida, efectos de luces, ideal para eventos infantiles y baby showers.", imagen: "imagenes/imgservicios/au1.jpg" }
+  { id: 1, nombre: "Caritas", capacidad: 80, ubicacion: "Belgrano", descripcion: "Megajuego, alberca de pelotas, laberinto de ligas, toboganes.", precio: 30000, imagen: "imagenes/imgservicios/salonvertical.jpg" },
+  { id: 2, nombre: "Travesuras", capacidad: 90, ubicacion: "Pellegrini 865", descripcion: "Juegos para niños, plaza blanda, pantalla temática.", precio: 30000, imagen: "imagenes/imgservicios/trave2.jpg" },
+  { id: 3, nombre: "Smile Eventos", capacidad: 100, ubicacion: "Avenida Belgrano 765", descripcion: "Pista de baile, videojuegos, castillo inflable, metegol.", precio: 30000, imagen: "imagenes/imgservicios/aura1.jpg" },
+  { id: 4, nombre: "Sueño Eventos", capacidad: 150, ubicacion: "Bolivia 234", descripcion: "Espacio para ceremonia, salón ambientado con luces cálidas, fotocabina.", precio: 30000, imagen: "imagenes/imgservicios/boda.png" },
+  { id: 5, nombre: "Amor Eterno", capacidad: 120, ubicacion: "Belgrano", descripcion: "Alberca de pelotas, laberintos, mesa de hockey, toboganes.",precio:30000, imagen: "imagenes/imgservicios/amoreterno.jpg" },
+  { id: 6, nombre: "White Eventos", capacidad: 150, ubicacion: "La Rioja 222", descripcion: "Vista imponente, ambiente sofisticado, catering gourmet, barra de tragos premium.", precio: 30000, imagen: "imagenes/imgservicios/white3.jpg" },
+  { id: 7, nombre: "Next Party", capacidad: 200, ubicacion: "Matanza 567", descripcion: "Espacio moderno con pista de luces y sonido envolvente.", precio: 30000, imagen: "imagenes/imgservicios/general.jpg" },
+  { id: 8, nombre: "Urban Eventos", capacidad: 180, ubicacion: "La Rioja 222", descripcion: "Diseño elegante, estilo minimalista, ideal para recepciones empresariales.", precio: 30000, imagen: "imagenes/imgservicios/urban.jpg" },
+  { id: 9, nombre: "Aura", capacidad: 100, ubicacion: "San Justo 567", descripcion: "Decoración cálida, efectos de luces, ideal para eventos infantiles y baby showers.", precio: 30000, imagen: "imagenes/imgservicios/au1.jpg" }
 ];
 
 function validarSesion() {
-  const usuario = localStorage.getItem("usuarioLogueado");
+  const usuario = sessionStorage.getItem("usuario");
   if (!usuario) {
     alert("Debes iniciar sesión primero.");
     window.location.href = "iniciosesion.html";
   } else {
-    document.getElementById("usuarioActivo").textContent = usuario;
+    const usuarioActivo = JSON.parse(usuario);
+    document.getElementById("usuarioActivo").textContent = usuarioActivo.username;
   }
 }
+
 
 function cerrarSesion() {
   localStorage.removeItem("usuarioLogueado");
@@ -38,17 +45,18 @@ function obtenerSalones() {
   return JSON.parse(localStorage.getItem(SALONES_KEY)) || [];
 }
 
-function agregarSalon(nombre, capacidad, ubicacion, descripcion, imagenBase64, nombreImagen) {
+function agregarSalon(nombre, capacidad, ubicacion, descripcion, imagenBase64, nombreImagen, precio) {
   let salones = obtenerSalones();
   let nuevoSalon = {
     id: salones.length ? salones[salones.length - 1].id + 1 : 1,
-    nombre, capacidad, ubicacion, descripcion, imagen: imagenBase64, nombreImagen
+    nombre, capacidad, ubicacion, descripcion, imagen: imagenBase64, nombreImagen, precio
   };
   salones.push(nuevoSalon);
   localStorage.setItem(SALONES_KEY, JSON.stringify(salones));
   console.log("Nuevo salón guardado:", nuevoSalon);
   mostrarSalonesEnTabla();
 }
+
 
 function eliminarSalon(id) {
   let confirmar = confirm("¿Estás seguro de que quieres eliminar este salón?");
@@ -65,25 +73,41 @@ function modificarSalon(id) {
   let capacidad = parseInt(document.querySelector(`#capacidad-${id}`).value);
   let ubicacion = document.querySelector(`#ubicacion-${id}`).value.trim();
   let descripcion = document.querySelector(`#descripcion-${id}`).value.trim();
+  let precio = parseFloat(document.querySelector(`#precio-${id}`).value);
   let archivoImagen = document.querySelector(`#imagen-${id}`).files[0];
   let salones = obtenerSalones();
   let index = salones.findIndex(salon => salon.id == id);
+
   if (index !== -1) {
     if (archivoImagen) {
       const reader = new FileReader();
       reader.onload = function (e) {
         salones[index].imagen = e.target.result;
+        salones[index].nombre = nombre;
+        salones[index].capacidad = capacidad;
+        salones[index].ubicacion = ubicacion;
+        salones[index].descripcion = descripcion;
+        salones[index].precio = precio;
         localStorage.setItem(SALONES_KEY, JSON.stringify(salones));
         mostrarSalonesEnTabla();
       };
       reader.readAsDataURL(archivoImagen);
     } else {
-      salones[index] = { id, nombre, capacidad, ubicacion, descripcion, imagen: salones[index].imagen };
+      salones[index] = {
+        id,
+        nombre,
+        capacidad,
+        ubicacion,
+        descripcion,
+        precio,
+        imagen: salones[index].imagen
+      };
       localStorage.setItem(SALONES_KEY, JSON.stringify(salones));
       mostrarSalonesEnTabla();
     }
   }
 }
+
 
 function mostrarSalonesEnTabla() {
   let salones = obtenerSalones();
@@ -101,6 +125,8 @@ function mostrarSalonesEnTabla() {
           <input type="text" id="ubicacion-${salon.id}" value="${salon.ubicacion}" class="d-none"></td>
       <td><span id="descripcion-text-${salon.id}">${salon.descripcion}</span>
           <textarea id="descripcion-${salon.id}" rows="3" class="d-none">${salon.descripcion}</textarea></td>
+          <td><span id="precio-text-${salon.id}">${salon.precio}</span>
+    <input type="number" id="precio-${salon.id}" value="${salon.precio}" class="d-none"></td>
       <td><img src="${salon.imagen}" style="max-width: 100px; border-radius: 5px;">
           <input type="file" id="imagen-${salon.id}" class="form-control mt-2 d-none" accept="image/*"></td>
       <td>
@@ -122,6 +148,8 @@ function editarSalon(id) {
   document.querySelector(`#capacidad-${id}`).classList.remove("d-none");
   document.querySelector(`#ubicacion-${id}`).classList.remove("d-none");
   document.querySelector(`#descripcion-${id}`).classList.remove("d-none");
+  document.querySelector(`#precio-text-${id}`).classList.add("d-none");
+  document.querySelector(`#precio-${id}`).classList.remove("d-none");
   document.querySelector(`#imagen-${id}`).classList.remove("d-none");
   document.querySelector(`#editar-${id}`).classList.add("d-none");
   document.querySelector(`#guardar-${id}`).classList.remove("d-none");
@@ -149,7 +177,9 @@ function mostrarSalonesPredefinidos() {
           <input type="text" id="ubicacion-predef-${salon.id}" value="${salon.ubicacion}" class="d-none"></td>
       <td><span id="descripcion-predef-text-${salon.id}">${salon.descripcion}</span>
           <textarea id="descripcion-predef-${salon.id}" rows="3" class="d-none">${salon.descripcion}</textarea></td>
-      <td><img src="${salon.imagen}" style="max-width: 100px;">
+      <td><span id="precio-predef-text-${salon.id}">${salon.precio}</span>
+    <input type="number" id="precio-predef-${salon.id}" value="${salon.precio}" class="d-none"></td>
+          <td><img src="${salon.imagen}" style="max-width: 100px;">
           <input type="file" id="imagen-predef-${salon.id}" class="form-control mt-2 d-none" accept="image/*"></td>
       <td>
         <button class="btn btn-secondary btn-sm" onclick="editarSalonPredefinido(${salon.id})" id="editar-predef-${salon.id}">Editar</button>
@@ -169,6 +199,8 @@ function editarSalonPredefinido(id) {
   document.querySelector(`#capacidad-predef-${id}`).classList.remove("d-none");
   document.querySelector(`#ubicacion-predef-${id}`).classList.remove("d-none");
   document.querySelector(`#descripcion-predef-${id}`).classList.remove("d-none");
+  document.querySelector(`#precio-predef-text-${id}`).classList.add("d-none");
+  document.querySelector(`#precio-predef-${id}`).classList.remove("d-none");
   document.querySelector(`#imagen-predef-${id}`).classList.remove("d-none");
   document.querySelector(`#editar-predef-${id}`).classList.add("d-none");
   document.querySelector(`#guardar-predef-${id}`).classList.remove("d-none");
@@ -179,6 +211,7 @@ function modificarSalonPredefinido(id) {
   let capacidad = parseInt(document.querySelector(`#capacidad-predef-${id}`).value);
   let ubicacion = document.querySelector(`#ubicacion-predef-${id}`).value.trim();
   let descripcion = document.querySelector(`#descripcion-predef-${id}`).value.trim();
+  let precio = parseFloat(document.querySelector(`#precio-predef-${id}`).value); // 👈 AGREGADO
   let archivoImagen = document.querySelector(`#imagen-predef-${id}`).files[0];
 
   let salonEditado = JSON.parse(localStorage.getItem(`salon_editado_${id}`)) || SALONES_PREDEFINIDOS.find(salon => salon.id === id);
@@ -191,6 +224,7 @@ function modificarSalonPredefinido(id) {
   salonEditado.capacidad = capacidad;
   salonEditado.ubicacion = ubicacion;
   salonEditado.descripcion = descripcion;
+  salonEditado.precio = precio; // 👈 ESTA LÍNEA VA ACÁ
 
   if (archivoImagen) {
     const reader = new FileReader();
@@ -204,6 +238,7 @@ function modificarSalonPredefinido(id) {
   }
 }
 
+
 function guardarEdicionSalon(id, salon) {
   localStorage.setItem(`salon_editado_${id}`, JSON.stringify(salon));
   mostrarSalonesPredefinidos();
@@ -215,6 +250,7 @@ document.getElementById("formSalon").addEventListener("submit", function (e) {
   const capacidad = parseInt(document.getElementById("capacidadSalon").value);
   const ubicacion = document.getElementById("ubicacionSalon").value.trim();
   const descripcion = document.getElementById("descripcionSalon").value.trim();
+  const precio = parseFloat(document.getElementById("precioSalon").value);
   const archivoImagen = document.getElementById("imagenSalon").files[0];
   if (!archivoImagen) {
     alert("Por favor, seleccioná una imagen.");
@@ -223,9 +259,14 @@ document.getElementById("formSalon").addEventListener("submit", function (e) {
   const reader = new FileReader();
   reader.onload = function (e) {
     const imagenBase64 = e.target.result;
-    agregarSalon(nombre, capacidad, ubicacion, descripcion, imagenBase64, archivoImagen.name);
+    agregarSalon(nombre, capacidad, ubicacion, descripcion, imagenBase64, archivoImagen.name, precio);
     document.getElementById("formSalon").reset();
   };
   reader.readAsDataURL(archivoImagen);
 });
+
 document.getElementById("cerrarSesionBtn").onclick = cerrarSesion;
+document.getElementById("cerrarSesion")?.addEventListener("click", () => {
+  sessionStorage.clear();
+  window.location.href = "iniciosesion.html";
+});
