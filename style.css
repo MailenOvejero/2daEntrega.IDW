@@ -1149,3 +1149,17 @@ body {
   color: #343a40;
   font-weight: bold;
 }
+
+
+
+/*para ultima entrega este estilo es presupuesto generado fondo degrade violeta con rosa*/
+.custom-gradient-header {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+}
+ /*modifique el color del boton generar presupuesto*/
+.btn-gradient {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  border: none;
+}
