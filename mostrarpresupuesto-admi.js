@@ -44,3 +44,10 @@ function borrarPresupuesto(id) {
   localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
   cargarPresupuestos(); 
 }
+
+function cerrarSesion() {
+  sessionStorage.clear();
+  window.location.href = "index.html";
+}
+
+document.getElementById("cerrarSesionBtn").onclick = cerrarSesion;
