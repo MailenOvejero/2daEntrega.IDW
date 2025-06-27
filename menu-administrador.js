@@ -158,27 +158,27 @@ function mostrarItems() {
 }
 
 function editarItem(id) {
-  document.getElementById(`nombre-text-${id}`).classList.add("d-none");
-  document.getElementById(`categoria-text-${id}`).classList.add("d-none");
-  document.getElementById(`descripcion-text-${id}`).classList.add("d-none");
-  document.getElementById(`precio-text-${id}`).classList.add("d-none");
+  document.getElementById(nombre-text-$,{id}).classList.add("d-none");
+  document.getElementById(categoria-text-$,{id}).classList.add("d-none");
+  document.getElementById(descripcion-text-$,{id}).classList.add("d-none");
+  document.getElementById(precio-text-$,{id}).classList.add("d-none");
 
-  document.getElementById(`nombre-${id}`).classList.remove("d-none");
-  document.getElementById(`categoria-${id}`).classList.remove("d-none");
-  document.getElementById(`descripcion-${id}`).classList.remove("d-none");
-  document.getElementById(`precio-${id}`).classList.remove("d-none");
-  document.getElementById(`imagen-${id}`).classList.remove("d-none");
+  document.getElementById(nombre-$,{id}).classList.remove("d-none");
+  document.getElementById(categoria-$,{id}).classList.remove("d-none");
+  document.getElementById(descripcion-$,{id}).classList.remove("d-none");
+  document.getElementById(precio-$,{id}).classList.remove("d-none");
+  document.getElementById(imagen-$,{id}).classList.remove("d-none");
 
-  document.getElementById(`editar-${id}`).classList.add("d-none");
-  document.getElementById(`guardar-${id}`).classList.remove("d-none");
+  document.getElementById(editar-$,{id}).classList.add("d-none");
+  document.getElementById(guardar-$,{id}).classList.remove("d-none");
 }
 
 function modificarItem(id) {
-  const nombre = document.getElementById(`nombre-${id}`).value.trim();
-  const categoria = document.getElementById(`categoria-${id}`).value.trim();
-  const descripcion = document.getElementById(`descripcion-${id}`).value.trim();
-  const precio = parseFloat(document.getElementById(`precio-${id}`).value);
-  const archivoImagen = document.getElementById(`imagen-${id}`).files[0];
+  const nombre = document.getElementById(nombre-$,{id}).value.trim();
+  const categoria = document.getElementById(categoria-$,{id}).value.trim();
+  const descripcion = document.getElementById(descripcion-$,{id}).value.trim();
+  const precio = parseFloat(document.getElementById(precio-$,{id}).value);
+  const archivoImagen = document.getElementById(imagen-$,{id}).files[0];
 
   let items = obtenerItems();
   const index = items.findIndex(item => item.id === id);
